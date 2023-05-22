@@ -23,7 +23,6 @@ export default function TokenTopup() {
     );
 }
 
-
 TokenTopup.getLayout = function getLayout(page, pageProps) {
 
     return <AppLayout {...pageProps}>{page}</AppLayout>
