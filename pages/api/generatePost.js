@@ -22,6 +22,16 @@ export default withApiAuthRequired(async function handler(req, res) {
 
     const { topic, keywords } = req.body;
 
+    if(!topic || !keywords){
+        res.status(422);
+        return;
+    }
+
+    if(topic.length > 80 || topic.length > 80){
+        res.status(422);
+        return;
+    }
+
     // const topic = "Top 10 tips for cats owners";
     // const keywords = "first-time cat owners, common cat-health issues, best cat breeds";
 
